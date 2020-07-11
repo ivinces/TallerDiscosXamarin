@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TallerTiendaDiscos.Views.Login">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Inicio Sesión" HorizontalOptions="CenterAndExpand" FontSize="Title"></Label>
+
+                <Image Source="tienda.jpg" BackgroundColor="Transparent" />
+                <Entry x:Name="userName" Placeholder="User Name" FontSize="Medium" HorizontalOptions="FillAndExpand"  TextColor="Black" Keyboard="Text" BackgroundColor="White"></Entry>
+                <Entry x:Name="password" IsPassword="True" Placeholder="Password" FontSize="Medium" HorizontalOptions="FillAndExpand"  TextColor="Black" BackgroundColor="White"></Entry>
+
+                <Button x:Name="login" TextColor="Black" Clicked="login_Clicked" Text="Login" FontSize="Medium" HorizontalOptions="FillAndExpand" BackgroundColor="Aqua"></Button>
+                <Button x:Name="signUp" Clicked="signUp_Clicked" FontSize="Medium" TextColor="Black" BackgroundColor="Aqua" HorizontalOptions="FillAndExpand" Text="Sign Up"></Button>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

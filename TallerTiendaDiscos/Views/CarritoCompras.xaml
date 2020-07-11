@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TallerTiendaDiscos.Views.CarritoCompras">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Carrito de Compras" VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center" FontSize="18" Padding="0,0,0,40"></Label>
+
+                <ListView x:Name="StdList">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="AUTO"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="25*"></ColumnDefinition>
+                                            <ColumnDefinition Width="25*"></ColumnDefinition>
+                                            <ColumnDefinition Width="25*"></ColumnDefinition>
+                                            <ColumnDefinition Width="25*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout Grid.Column="0">
+                                            <Image Source="{Binding ImagenURL}" WidthRequest="50" HeightRequest="50"></Image>
+                                        </StackLayout>
+                                        <StackLayout Grid.Column="1">
+                                            <Label Text="{Binding Nombre}"></Label>
+                                        </StackLayout>
+                                        <StackLayout Grid.Column="2">
+                                            <Label Text="$10" HorizontalOptions="Center"></Label>
+                                        </StackLayout>
+                                        <StackLayout Grid.Column="3">
+                                            <Button x:Name="Eliminar" Text="Eliminar" BackgroundColor="Aqua" TextColor="White" Clicked="Eliminar_Clicked"></Button>
+                                        </StackLayout>
+                                    </Grid>
+                                </Grid>
+                                
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

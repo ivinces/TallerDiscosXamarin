@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+            xmlns:Map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="TallerTiendaDiscos.Views.Mi_Cuenta">
+    <ContentPage Title="Nosotros">
+        <ContentPage.Content>
+            <StackLayout>
+                <Image Source="https://cadenaser00.epimg.net/programa/imagenes/2015/04/17/la_ventana/1429258503_206220_1429258781_noticia_normal.jpg"></Image>
+                <Label Text="Guayaquil, Malecón Simón Bolívar 305 y Padre Aguirre Edificio El Fortín, 1er piso, Oficina 3"
+                HorizontalOptions="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Ubicación">
+        <ContentPage.Content>
+            <ScrollView>
+
+                <StackLayout>
+
+                    <Map:Map x:Name="MapaGeo" MapType="Street" HeightRequest="700" 
+                     WidthRequest="400"></Map:Map>
+
+                </StackLayout>
+
+            </ScrollView>
+        </ContentPage.Content>
+    </ContentPage>
+
+</TabbedPage>
